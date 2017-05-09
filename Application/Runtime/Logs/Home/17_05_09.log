@@ -107,3 +107,244 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003338s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003481s ]
 
+[ 2017-05-09T15:06:47+08:00 ] 127.0.0.1 /index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000396s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000491s ]
+NOTIC: [8] Undefined variable: _page_title D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: _page_keywords D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 6 行.
+NOTIC: [8] Undefined variable: _page_description D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 7 行.
+NOTIC: [8] Undefined variable: _show_nav D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+NOTIC: [8] Undefined variable: _show_nav D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 140 行.
+NOTIC: [8] Undefined variable: _show_nav D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 145 行.
+NOTIC: [8] Undefined variable: catData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [8] Undefined variable: goods1 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 333 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 333 行.
+NOTIC: [8] Undefined variable: goods3 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: goods4 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 365 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 365 行.
+NOTIC: [8] Undefined variable: goods2 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 381 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 381 行.
+NOTIC: [8] Undefined variable: floorData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 453 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 453 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.303947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.304053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001256s ]
+
+[ 2017-05-09T15:14:02+08:00 ] 127.0.0.1 /index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002245s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+NOTIC: [8] Undefined variable: _page_keywords D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 6 行.
+NOTIC: [8] Undefined variable: _page_description D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 7 行.
+NOTIC: [8] Undefined variable: catData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [8] Undefined variable: goods1 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 333 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 333 行.
+NOTIC: [8] Undefined variable: goods3 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: goods4 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 365 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 365 行.
+NOTIC: [8] Undefined variable: goods2 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 381 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 381 行.
+NOTIC: [8] Undefined variable: floorData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 453 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 453 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001299s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001421s ]
+
+[ 2017-05-09T15:22:14+08:00 ] 127.0.0.1 /index.php/home/index/goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] Undefined variable: catData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 163 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 163 行.
+NOTIC: [8] Undefined variable: catPath D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 210 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 213 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 330 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 801 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022408s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001378s ]
+
+[ 2017-05-09T15:22:14+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001486s ]
+ERR: 非法操作:displayHistory
+
+[ 2017-05-09T15:22:35+08:00 ] 127.0.0.1 /index.php/home/index/goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined variable: catData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 163 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 163 行.
+NOTIC: [8] Undefined variable: catPath D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 210 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 213 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 330 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 801 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001653s ]
+
+[ 2017-05-09T15:22:36+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001305s ]
+ERR: 非法操作:displayHistory
+
+[ 2017-05-09T15:22:38+08:00 ] 127.0.0.1 /index.php/home/index/goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000410s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Undefined variable: catData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 163 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 163 行.
+NOTIC: [8] Undefined variable: catPath D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 210 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 213 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 330 行.
+NOTIC: [8] Undefined variable: info D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 801 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001969s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002054s ]
+
+[ 2017-05-09T15:22:39+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
+ERR: 非法操作:displayHistory
+
+[ 2017-05-09T16:11:03+08:00 ] 127.0.0.1 /index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001722s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000404s ]
+NOTIC: [8] Undefined variable: catData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [8] Undefined variable: goods1 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 333 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 333 行.
+NOTIC: [8] Undefined variable: goods3 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: goods4 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 365 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 365 行.
+NOTIC: [8] Undefined variable: goods2 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 381 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 381 行.
+NOTIC: [8] Undefined variable: floorData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 453 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 453 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001891s ]
+
+[ 2017-05-09T16:11:05+08:00 ] 127.0.0.1 /index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+NOTIC: [8] Undefined variable: catData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [8] Undefined variable: goods1 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 333 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 333 行.
+NOTIC: [8] Undefined variable: goods3 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: goods4 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 365 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 365 行.
+NOTIC: [8] Undefined variable: goods2 D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 381 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 381 行.
+NOTIC: [8] Undefined variable: floorData D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 453 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 453 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015796s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000937s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001012s ]
+
