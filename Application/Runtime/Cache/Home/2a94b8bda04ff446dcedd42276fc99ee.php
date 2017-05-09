@@ -144,7 +144,7 @@
 
             <div class="cat_bd <?php if($_show_nav == 0) echo 'none'; ?>">
                 <!-- 循环输出三层分类数据 -->
-                <?php foreach ($catData as $k => $v): ?>
+                <?php foreach ($cateDate as $k => $v): ?>
                 <div class="cat <?php if($k==0) echo 'item1'; ?>">
                     <h3><a href=""><?php echo $v['cat_name'];?></a> <b></b></h3>
                     <div class="cat_detail none">
@@ -457,7 +457,7 @@
     <div class="floor_left fl">
         <!-- 商品分类信息 start-->
         <div class="cate fl">
-            <h2><?php echo $v['cat_name']; ?></h2>
+            <h2><?php echo $v['cate_name']; ?></h2>
             <div class="cate_wrap">
                 <ul>
                     <?php foreach ($v['subCat'] as $k1 => $v1): ?>
