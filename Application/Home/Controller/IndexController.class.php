@@ -2,6 +2,18 @@
 namespace Home\Controller;
 class IndexController extends NavController {
     public function index(){
+        // 获取促销商品
+        $goodsModel =D('Admin/Goods');
+        $goods1 = $goodsModel->getPromoteGoods();
+        $goods2 = $goodsModel->getRecGoods('is_new');   // 新品
+        $goods3 = $goodsModel->getRecGoods('is_hot');   // 热卖
+        $goods4 = $goodsModel->getRecGoods('is_best');   // 精品
+        $this->assign(array(
+            'goods1'=>$goods1,
+            'goods2'=>$goods2,
+            'goods3'=>$goods3,
+            'goods4'=>$goods4,
+        ));
         // 页面信息设置
         $this->assign(array(
             '_page_title'=>'首页',

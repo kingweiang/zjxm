@@ -104,6 +104,48 @@
                         <input type="radio" name="is_on_sale" value="否" /> 否
                     </td>
                 </tr>
+                <tr>
+                    <td class="label">促销价格：</td>
+                    <td>
+                        价格：￥<input type="text" name="promote_price" size="8" />元
+                        开始时间：<input type="text" id="promote_start_date" name="promote_start_date" />
+                        结束时间：<input type="text" id="promote_end_date" name="promote_end_date" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否新品：</td>
+                    <td>
+                        <input type="radio" name="is_new" value="是" /> 是
+                        <input type="radio" name="is_new" value="否" checked="checked" /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否精品：</td>
+                    <td>
+                        <input type="radio" name="is_best" value="是" /> 是
+                        <input type="radio" name="is_best" value="否" checked="checked" /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否热卖：</td>
+                    <td>
+                        <input type="radio" name="is_hot" value="是" /> 是
+                        <input type="radio" name="is_hot" value="否" checked="checked" /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">推荐到楼层：</td>
+                    <td>
+                        <input type="radio" name="is_floor" value="是" /> 是
+                        <input type="radio" name="is_floor" value="否" checked="checked" /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">排序：</td>
+                    <td>
+                        <input type="text" name="sort_num" value="100" size="8"/>
+                    </td>
+                </tr>
             </table>
             <!--商品描述表-->
             <table style="display: none" width="100%" class="tab_table" align="center">
@@ -139,8 +181,13 @@
             </table>
             <!--商品图片表-->
             <table style="display: none"  width="90%" class="tab_table" align="center">
-
-
+                <tr>
+                    <td>
+                        <input id="btn_add_pic" type="button" value="添加一张" />
+                        <hr />
+                        <ul id="ul_pic_list"></ul>
+                    </td>
+                </tr>
             </table>
             <div class="button-div">
                 <input type="submit" value=" 确定 " class="button"/>
@@ -149,6 +196,20 @@
         </form>
     </div>
 </div>
+
+<!-- 时间插件 -->
+<link href="/Public/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="/Public/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="/Public/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="/Public/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/Public/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
+<script>$.timepicker.setDefaults($.timepicker.regional['zh-CN']);</script>
+<script>
+    $('#promote_start_date').datetimepicker();
+    $('#promote_end_date').datetimepicker();
+</script>
+
 
 <!--导入在线编辑器 -->
 <link href="/Public/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">

@@ -8,9 +8,9 @@ use Think\Page;
 class GoodsModel extends Model 
 {
 	 // 添加时调用create方法允许接收的字段
-	protected $insertFields = 'goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,ext_cate_id,type_id';
+	protected $insertFields = 'goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,ext_cate_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num';
     // 修改时调用update方法允许接收的字段
-	protected $updateFields = 'id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,ext_cate_id,type_id';
+	protected $updateFields = 'id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,ext_cate_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num';
 	// 定义验证规则
 	protected $_validate = array(
 		array('goods_name', 'require', '商品名称不能为空！', 1),
@@ -444,6 +444,39 @@ class GoodsModel extends Model
                 $id[]=$v['id'];
         }
         return $id;
+    }
+    /**
+     * 获取正在促销商品
+     */
+    public function getPromoteGoods($limit = 5)
+    {
+        $today =date('Y-m-d H:i');     //  获取当前时间
+        return $this->field('id,goods_name,mid_logo,promote_price')
+            ->where(array(
+            'is_on_sale'=> array('eq','是'),            // 必须是上架商品
+            'promote_price'=>array('gt',0),             // 判断是否维护促销价
+            'promote_start_date'=>array('elt',$today), // 判断当前时间是否大于促销开始时间
+            'promote_end_date'=>array('egt',$today),   // 判断当前时间是否小于促销开始时间
+        ))->limit($limit)
+          ->order('sort_num ASC')          //  定义显示商品优先级
+          ->select();
+
+    }
+
+    /**
+     * 取出三中推荐
+     * $recType 定义推荐类型，is_hot,is_new,is_best
+     */
+    public function getRecGoods($recType,$limit = 5)
+    {
+        return $this->field('id,goods_name,mid_logo,shop_price')
+            ->where(array(
+                'is_on_sale'=> array('eq','是'),            // 必须是上架商品
+                "$recType"=>array('eq','是'),
+            ))->limit($limit)
+            ->order('sort_num ASC')          //  定义显示商品优先级
+            ->select();
+
     }
 }
 

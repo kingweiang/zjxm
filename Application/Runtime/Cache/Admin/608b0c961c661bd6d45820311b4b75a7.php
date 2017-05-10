@@ -123,6 +123,48 @@
                         <input type="radio" name="is_on_sale" value="否" <?php if($data['is_on_sale'] == '否') echo 'checked="checked"'; ?> /> 否
                     </td>
                 </tr>
+                <tr>
+                    <td class="label">促销价格：</td>
+                    <td>
+                        价格：￥<input type="text" name="promote_price" size="8" value="<?php echo $data['promote_price']; ?>" />元
+                        开始时间：<input type="text" id="promote_start_date" name="promote_start_date" value="<?php echo $data['promote_start_date']; ?>" />
+                        结束时间：<input type="text" id="promote_end_date" name="promote_end_date" value="<?php echo $data['promote_end_date']; ?>" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否新品：</td>
+                    <td>
+                        <input type="radio" name="is_new" value="是" <?php if($data['is_new'] == '是') echo 'checked="checked"'; ?> /> 是
+                        <input type="radio" name="is_new" value="否" <?php if($data['is_new'] == '否') echo 'checked="checked"'; ?>  /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否精品：</td>
+                    <td>
+                        <input type="radio" name="is_best" value="是" <?php if($data['is_best'] == '是') echo 'checked="checked"'; ?> /> 是
+                        <input type="radio" name="is_best" value="否" <?php if($data['is_best'] == '否') echo 'checked="checked"'; ?> /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否热卖：</td>
+                    <td>
+                        <input type="radio" name="is_hot" value="是" <?php if($data['is_hot'] == '是') echo 'checked="checked"'; ?> /> 是
+                        <input type="radio" name="is_hot" value="否" <?php if($data['is_hot'] == '否') echo 'checked="checked"'; ?> /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">推荐到楼层：</td>
+                    <td>
+                        <input type="radio" name="is_floor" value="是" <?php if($data['is_floor'] == '是') echo 'checked="checked"'; ?>/> 是
+                        <input type="radio" name="is_floor" value="否" <?php if($data['is_floor'] == '否') echo 'checked="checked"'; ?> /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">排序：</td>
+                    <td>
+                        <input type="text" name="sort_num" value="<?php echo $data['sort_num']; ?>" size="8"/>
+                    </td>
+                </tr>
             </table>
             <!-- 商品描述 -->
             <table style="display:none;" width="100%" class="tab_table" align="center">
@@ -206,6 +248,19 @@
     </div>
 </div>
 
+<!-- 时间插件 -->
+<link href="/Public/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="/Public/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="/Public/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="/Public/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/Public/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
+<script>$.timepicker.setDefaults($.timepicker.regional['zh-CN']);</script>
+<script>
+    $('#promote_start_date').datetimepicker();
+    $('#promote_end_date').datetimepicker();
+</script>
+
 <!--导入在线编辑器 -->
 <link href="/Public/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" charset="utf-8" src="/Public/umeditor1_2_2-utf8-php/umeditor.config.js"></script>
@@ -255,7 +310,7 @@
             $.ajax({
                 type : "GET",
                 url : "<?php echo U('ajaxDelPic', '', FALSE); ?>/picid/"+pid,
-                success : function(data)
+                success : function($data)
                 {
                     // 把图片从页面中删除掉
                     li.remove();
@@ -276,12 +331,12 @@
                 type : "GET",
                 url : "<?php echo U('ajaxGetAttr', '', FALSE); ?>/type_id/"+typeId,
                 dataType : "json",
-                success : function(data)
+                success : function($data)
                 {
                     /** 把服务器返回的属性循环拼成一个LI字符串，并显示在页面中 **/
                     var li = "";
                     // 循环每个属性
-                    $(data).each(function(k,v){
+                    $($data).each(function(k,v){
                         li += '<li>';
 
                         // 如果这个属性类型是可选的就有一个+
@@ -365,8 +420,9 @@
                 {
                     $.ajax({
                         type : "GET",
+                        // 传入商品ID和商品属性id，后面js的变量不能放入U函数里面
                         url : "<?php echo U('ajaxDelAttr?goods_id='.$data['id'], '', FALSE); ?>/gaid/"+gaid,
-                        success : function(data)
+                        success : function($data)
                         {
                             // 再把页面中的记录删除
                             li.remove();

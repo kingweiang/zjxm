@@ -21,11 +21,22 @@ create table p_goods
 	brand_id mediumint unsigned not null default '0' comment '品牌ID',
 	cate_id mediumint unsigned not null default '0' comment '主分类ID',
 	type_id mediumint unsigned not null default '0' comment '类型ID',
+  promote_price decimal(10,2) NOT NULL DEFAULT '0.00'COMMENT '促销价格',
+  promote_start_date DATETIME NOT NULL COMMENT '添加时间',
+  promote_end_date DATETIME NOT NULL COMMENT '结束时间',
+  is_new ENUM('是','否') NOT NULL DEFAULT '否'COMMENT '是否新品',
+  is_hot ENUM('是','否') NOT NULL DEFAULT '否'COMMENT '是否热卖',
+  is_best ENUM('是','否') NOT NULL DEFAULT '否'COMMENT '是否精品',
+  sort_num TINYINT UNSIGNED NOT NULL DEFAULT '100'COMMENT '排序的数字',
 	primary key (id),
+  key promote_price(promote_price),
+  key promote_start_date(promote_start_date),
+  key promote_end_date(promote_end_date),
 	key shop_price(shop_price),
 	key addtime(addtime),
 	key brand_id(brand_id),
 	key cate_id(cate_id),
+	key sort_num(sort_num),
 	key is_on_sale(is_on_sale)
 )engine=InnoDB default charset=utf8 comment '商品';
 
