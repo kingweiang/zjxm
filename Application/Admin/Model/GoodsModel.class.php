@@ -8,9 +8,11 @@ use Think\Page;
 class GoodsModel extends Model 
 {
 	 // 添加时调用create方法允许接收的字段
-	protected $insertFields = 'goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,ext_cate_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num';
+	protected $insertFields = 'goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,ext_cate_id,
+	type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num,is_floor';
     // 修改时调用update方法允许接收的字段
-	protected $updateFields = 'id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,ext_cate_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num';
+	protected $updateFields = 'id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,
+	ext_cate_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num,is_floor';
 	// 定义验证规则
 	protected $_validate = array(
 		array('goods_name', 'require', '商品名称不能为空！', 1),
@@ -418,7 +420,7 @@ class GoodsModel extends Model
     public function getGoodsIdByCatId($cateID)
     {
 //            先取出所有子分类的id
-        $cateModel = D('category');
+        $cateModel = D('Admin/Category');
         $children = $cateModel->getChildren($cateID);
 //            把当前ID和子分类ID放到一起
         $children[] = $cateID;

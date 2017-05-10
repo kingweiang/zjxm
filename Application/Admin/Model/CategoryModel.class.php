@@ -3,8 +3,8 @@ namespace Admin\Model;
 use Think\Model;
 class CategoryModel extends Model
 {
-	protected $insertFields = array('cat_name','parent_id');
-	protected $updateFields = array('id','cat_name','parent_id');
+	protected $insertFields = array('cat_name','parent_id','is_floor');
+	protected $updateFields = array('id','cat_name','parent_id','is_floor');
 	protected $_validate = array(
 		array('cat_name', 'require', '分类名称不能为空！', 1, 'regex', 3),
 	);
@@ -108,5 +108,52 @@ class CategoryModel extends Model
             return $cateData;
         }
 
+    }
+    /**
+     * 获取首页楼层数据
+     */
+    public function floorData()
+    {
+        //  先取出推荐到楼层的顶级分类
+        $ret = $this->where(array(
+            'parent_id'=>array('eq',0),          // 顶级分类
+            'is_floor'=>array('eq','是'),        // 推荐的
+        ))->select();
+        $goodsModel = D('Admin/Goods');
+        // 循环每个楼层取出楼层中的数据
+        foreach ($ret as $k => $v){
+            /**
+                获取未推荐的二级分类, 把查询数据加入数组有两种方法
+             * 一种是使用引用传递 foreach ($ret as $k => &$v)  $v['subCat']
+             * 另一种是增加$k字段 foreach ($ret as $k => $v)  $ret[$k]['subCat']
+             */
+            $ret[$k]['subCat']=$this->where(array(
+                'parent_id'=>array('eq',$v['id']),          // 二级分类
+                'is_floor'=>array('eq','否'),                // 未推荐
+            ))->select();
+            /**
+               获取推荐的二级分类,
+             */
+            $ret[$k]['recSubCat']=$this->where(array(
+                'parent_id'=>array('eq',$v['id']),          // 二级分类
+                'is_floor'=>array('eq','是'),                // 未推荐
+            ))->select();
+            /**
+            获取推荐的二级分类, 下的8个被推荐的商品
+             */
+           foreach ($ret[$k]['recSubCat'] as $k1 => $v1){
+               // 取出这个分类下所有商品的ID并返回一维数组
+               $gids = $goodsModel->getGoodsIdByCatId($v1['id']);
+               // 再根据商品id 取出商品详细信息
+               $ret[$k]['recSubCat'][$k1]['goods']= $goodsModel->field('id,mid_logo,goods_name,shop_price')
+                   ->limit(8)
+                   ->where(array(
+                       'is_on_sale' => array('eq','是'),
+                       'is_floor'=>array('eq','是'),
+                       'id'=>array('in',$gids),
+                   ))->order('sort_num ASC')->select();
+           }
+        }
+        return $ret;
     }
 }

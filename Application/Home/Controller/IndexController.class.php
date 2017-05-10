@@ -2,6 +2,9 @@
 namespace Home\Controller;
 class IndexController extends NavController {
     public function index(){
+        // 获取首页楼层的数据
+        $cateModel = D('Admin/Category');
+        $floorData = $cateModel->floorData();
         // 获取促销商品
         $goodsModel =D('Admin/Goods');
         $goods1 = $goodsModel->getPromoteGoods();
@@ -13,7 +16,9 @@ class IndexController extends NavController {
             'goods2'=>$goods2,
             'goods3'=>$goods3,
             'goods4'=>$goods4,
+            'floorData'=>$floorData,
         ));
+
         // 页面信息设置
         $this->assign(array(
             '_page_title'=>'首页',

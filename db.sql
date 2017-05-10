@@ -27,6 +27,7 @@ create table p_goods
   is_new ENUM('是','否') NOT NULL DEFAULT '否'COMMENT '是否新品',
   is_hot ENUM('是','否') NOT NULL DEFAULT '否'COMMENT '是否热卖',
   is_best ENUM('是','否') NOT NULL DEFAULT '否'COMMENT '是否精品',
+  is_floor ENUM('是','否') NOT NULL DEFAULT '否'COMMENT '是否楼层推荐',
   sort_num TINYINT UNSIGNED NOT NULL DEFAULT '100'COMMENT '排序的数字',
 	primary key (id),
   key promote_price(promote_price),
@@ -40,7 +41,7 @@ create table p_goods
 	key is_on_sale(is_on_sale)
 )engine=InnoDB default charset=utf8 comment '商品';
 
--- alter table p_goods add type_id mediumint unsigned not null default '0' comment '类型ID';
+-- alter table p_category add is_floor  ENUM('是','否') NOT NULL DEFAULT '否' COMMENT '是否楼层推荐';
 
 
 drop table if exists p_brand;
@@ -79,7 +80,8 @@ create table p_category
    id mediumint unsigned not null auto_increment comment 'Id',
    cat_name varchar(30) not null comment '分类名称',
    parent_id mediumint unsigned not null default '0' comment '上级分类ID，0为顶级分类',
-   primary key (id)
+  is_floor  ENUM('是','否') NOT NULL DEFAULT '否' COMMENT '是否楼层推荐',
+  primary key (id)
 )engine=InnoDB default charset=utf8 comment '分类表';
 
 

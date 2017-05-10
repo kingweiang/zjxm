@@ -450,6 +450,7 @@
 
 <div style="clear:both;"></div>
 
+<!--楼层区域 start -->
 <?php foreach ($floorData as $k => $v): ?>
 <!--1F 电脑办公 start -->
 <div class="floor1 floor w1210 bc mt10">
@@ -457,7 +458,7 @@
     <div class="floor_left fl">
         <!-- 商品分类信息 start-->
         <div class="cate fl">
-            <h2><?php echo $v['cate_name']; ?></h2>
+            <h2><?php echo $v['cat_name']; ?></h2>
             <div class="cate_wrap">
                 <ul>
                     <?php foreach ($v['subCat'] as $k1 => $v1): ?>
@@ -500,6 +501,7 @@
     <!-- 商品列表信息 end-->
 </div>
 <!-- 1F 左侧 end -->
+<!--楼层区域 end -->
 
 <!-- 右侧 start -->
 <div class="sidebar fl ml10">
