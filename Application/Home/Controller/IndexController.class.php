@@ -2,6 +2,9 @@
 namespace Home\Controller;
 class IndexController extends NavController {
     public function index(){
+        // 测试静态化结束时并发调用的代码
+        $file = uniqid();  //基于以微秒计的当前时间，生成一个唯一的 ID
+        file_put_contents('./piao/'.$file,'abc'); //  每次执行生成一个文件
         // 获取首页楼层的数据
         $cateModel = D('Admin/Category');
         $floorData = $cateModel->floorData();

@@ -47,7 +47,7 @@
 			<tr class="tron">
 				<td><?php echo $v['brand_name']; ?></td>
 				<td><?php echo $v['site_url']; ?></td>
-				<td><?php echo $v['logo']; ?></td>
+				<td><?php showImage($v['logo'],100); ?></td>
 		        <td align="center">
 		        	<a href="<?php echo U('edit?id='.$v['id'].'&p='.I('get.p')); ?>" title="编辑">编辑</a> |
 	                <a href="<?php echo U('delete?id='.$v['id'].'&p='.I('get.p')); ?>" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 

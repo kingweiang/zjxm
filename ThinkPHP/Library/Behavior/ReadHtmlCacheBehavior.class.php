@@ -13,12 +13,25 @@ use Think\Storage;
 /**
  * 系统行为扩展：静态缓存读取
  */
+$fp = null;  //  建立全局变量，整个请求都执行完之后才释放
 class ReadHtmlCacheBehavior {
     // 行为扩展的执行入口必须是run
     public function run(&$params){
         // 开启静态缓存
         if(IS_GET && C('HTML_CACHE_ON'))  {
             $cacheTime = $this->requireHtmlCache();
+            // 判断静态页是否存在
+            if( false !== $cacheTime && $this->checkHTMLCache(HTML_FILE_NAME,$cacheTime)) { //静态页面有效
+                // 读取静态页面输出
+                echo Storage::read(HTML_FILE_NAME,'html');
+                exit();
+            }
+            // 如果静态页面不存在或已经过期就向后执行-》只让一个客户端通过生成静态页
+//            其他客户端阻塞在这里等待第一个客户端生成静态页
+            global $fp;
+            $fp = fopen('/read_html_cache.lock','r');
+            flock($fp,LOCK_EX); // 只有一个客户端可以通过
+
             if( false !== $cacheTime && $this->checkHTMLCache(HTML_FILE_NAME,$cacheTime)) { //静态页面有效
                 // 读取静态页面输出
                 echo Storage::read(HTML_FILE_NAME,'html');

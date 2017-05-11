@@ -114,46 +114,62 @@ class CategoryModel extends Model
      */
     public function floorData()
     {
-        //  先取出推荐到楼层的顶级分类
-        $ret = $this->where(array(
-            'parent_id'=>array('eq',0),          // 顶级分类
-            'is_floor'=>array('eq','是'),        // 推荐的
-        ))->select();
-        $goodsModel = D('Admin/Goods');
-        // 循环每个楼层取出楼层中的数据
-        foreach ($ret as $k => $v){
-            /**
-                获取未推荐的二级分类, 把查询数据加入数组有两种方法
-             * 一种是使用引用传递 foreach ($ret as $k => &$v)  $v['subCat']
-             * 另一种是增加$k字段 foreach ($ret as $k => $v)  $ret[$k]['subCat']
-             */
-            $ret[$k]['subCat']=$this->where(array(
-                'parent_id'=>array('eq',$v['id']),          // 二级分类
-                'is_floor'=>array('eq','否'),                // 未推荐
+        $floorData = S('floorData');   // 创建缓存
+        if($floorData)
+            return $floorData;
+        else {
+            //  先取出推荐到楼层的顶级分类
+            $ret = $this->where(array(
+                'parent_id' => array('eq', 0),          // 顶级分类
+                'is_floor' => array('eq', '是'),        // 推荐的
             ))->select();
-            /**
-               获取推荐的二级分类,
-             */
-            $ret[$k]['recSubCat']=$this->where(array(
-                'parent_id'=>array('eq',$v['id']),          // 二级分类
-                'is_floor'=>array('eq','是'),                // 未推荐
-            ))->select();
-            /**
-            获取推荐的二级分类, 下的8个被推荐的商品
-             */
-           foreach ($ret[$k]['recSubCat'] as $k1 => $v1){
-               // 取出这个分类下所有商品的ID并返回一维数组
-               $gids = $goodsModel->getGoodsIdByCatId($v1['id']);
-               // 再根据商品id 取出商品详细信息
-               $ret[$k]['recSubCat'][$k1]['goods']= $goodsModel->field('id,mid_logo,goods_name,shop_price')
-                   ->limit(8)
-                   ->where(array(
-                       'is_on_sale' => array('eq','是'),
-                       'is_floor'=>array('eq','是'),
-                       'id'=>array('in',$gids),
-                   ))->order('sort_num ASC')->select();
-           }
+            $goodsModel = D('Admin/Goods');
+            // 循环每个楼层取出楼层中的数据
+            foreach ($ret as $k => $v) {
+                // 取出这个楼层里面的品牌信息
+                // 先出去这个楼层上的所有商品的id
+                $goodsId = $goodsModel->getGoodsIdByCatId($v['id']);
+                //  再取出所用商品的品牌信息
+                $ret[$k]['brand'] = $goodsModel->alias('a')
+                    ->join('LEFT JOIN __BRAND__ b ON a.brand_id= b.id')
+                    ->field('DISTINCT brand_id,b.brand_name,b.logo')
+                    ->where(array(
+                        'a.id' => array('in', $goodsId),
+                        'a.brand_id' => array('neq', 0),   //  品牌 id 不等于0
+                    ))->limit(9)->select();
+                /**
+                 * 获取未推荐的二级分类, 把查询数据加入数组有两种方法
+                 * 一种是使用引用传递 foreach ($ret as $k => &$v)  $v['subCat']
+                 * 另一种是增加$k字段 foreach ($ret as $k => $v)  $ret[$k]['subCat']
+                 */
+                $ret[$k]['subCat'] = $this->where(array(
+                    'parent_id' => array('eq', $v['id']),          // 二级分类
+                    'is_floor' => array('eq', '否'),                // 未推荐
+                ))->select();
+                /**
+                 * 获取推荐的二级分类,
+                 */
+                $ret[$k]['recSubCat'] = $this->where(array(
+                    'parent_id' => array('eq', $v['id']),          // 二级分类
+                    'is_floor' => array('eq', '是'),                // 未推荐
+                ))->select();
+                /**
+                 * 获取推荐的二级分类, 下的8个被推荐的商品
+                 */
+                foreach ($ret[$k]['recSubCat'] as $k1 => $v1) {
+                    // 取出这个分类下所有商品的ID并返回一维数组
+                    $gids = $goodsModel->getGoodsIdByCatId($v1['id']);
+                    // 再根据商品id 取出商品详细信息
+                    $ret[$k]['recSubCat'][$k1]['goods'] = $goodsModel->field('id,mid_logo,goods_name,shop_price')
+                        ->where(array(
+                            'is_on_sale' => array('eq', '是'),
+                            'is_floor' => array('eq', '是'),
+                            'id' => array('in', $gids),
+                        ))->order('sort_num ASC')->limit(8)->select();
+                }
+            }
+            S('floorData',$ret,86400);  //  将获取的数据缓存起来，缓存一天
+            return $ret;
         }
-        return $ret;
     }
 }
