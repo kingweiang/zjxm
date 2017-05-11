@@ -172,4 +172,18 @@ class CategoryModel extends Model
             return $ret;
         }
     }
+    /**
+     * 取一个分类找出上级分类，用于面包屑
+     */
+    public function parentPath($catId)
+    {
+        static $ret = array();  // 定义一个数组，把结果存入
+//        调出当前分类的信息
+        $info = $this->field('id,cat_name,parent_id')->find($catId);
+        $ret[] = $info;
+
+        if($info['parent_id']>0)   // 判断是否是顶级id
+            $this->parentPath($info['parent_id']);  // 递归，寻找上级信息
+        return $ret;
+    }
 }

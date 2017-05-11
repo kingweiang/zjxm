@@ -7,5 +7,6 @@ return array(
     // 定义那些页面生成静态页面
     'HTML_CACHE_RULES'  =>     array(  // 定义静态缓存规则
             'index:index'=>array('index',43200),   //  生成首页为index 页面时间12小时
+            'index:goods'=>array('goods-{id}',43200),   //  生成商品详情为goods 页面时间12小时
         )
 );
