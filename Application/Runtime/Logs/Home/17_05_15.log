@@ -1,0 +1,495 @@
+[ 2017-05-15T11:34:36+08:00 ] 127.0.0.1 /index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: DESCRIBE p_category [ RunTime:0.000822s ]
+SQL: SELECT * FROM `p_category`  [ RunTime:0.000732s ]
+SQL: SELECT * FROM `p_category` WHERE `parent_id` = 0 AND `is_floor` = '是'  [ RunTime:0.000456s ]
+SQL: DESCRIBE p_goods [ RunTime:0.002939s ]
+SQL: SELECT * FROM `p_category`  [ RunTime:0.000353s ]
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+SQL: SELECT `id` FROM `p_goods` WHERE `cate_id` IN ('1')  [ RunTime:0.000457s ]
+SQL: DESCRIBE p_goods_cate [ RunTime:0.000700s ]
+SQL: SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('1')  [ RunTime:0.039848s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `p_goods_cate` WHERE `cate_id` IN ('1')' at line 1
+ [ SQL语句 ] : SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('1') 
+SQL: SELECT DISTINCT brand_id,b.brand_name,b.logo FROM p_goods a LEFT JOIN p_brand b ON a.brand_id= b.id  WHERE a.id IN ('2','7','8','10','11','13','14','16','17','18','19','20','21','23','24') AND a.brand_id <> 0 LIMIT 9   [ RunTime:0.002374s ]
+SQL: SELECT * FROM `p_category` WHERE `parent_id` = '1' AND `is_floor` = '否'  [ RunTime:0.000355s ]
+SQL: SELECT * FROM `p_category` WHERE `parent_id` = '1' AND `is_floor` = '是'  [ RunTime:0.000318s ]
+SQL: SELECT * FROM `p_category`  [ RunTime:0.000351s ]
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+SQL: SELECT `id` FROM `p_goods` WHERE `cate_id` IN ('16')  [ RunTime:0.000292s ]
+SQL: SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('16')  [ RunTime:0.000167s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `p_goods_cate` WHERE `cate_id` IN ('16')' at line 1
+ [ SQL语句 ] : SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('16') 
+SQL: SELECT `id`,`mid_logo`,`goods_name`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_floor` = '是' AND `id` IN ('15','22') ORDER BY sort_num ASC LIMIT 8   [ RunTime:0.001561s ]
+SQL: SELECT * FROM `p_category`  [ RunTime:0.000398s ]
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+SQL: SELECT `id` FROM `p_goods` WHERE `cate_id` IN ('17')  [ RunTime:0.000319s ]
+SQL: SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('17')  [ RunTime:0.000337s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `p_goods_cate` WHERE `cate_id` IN ('17')' at line 1
+ [ SQL语句 ] : SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('17') 
+SQL: SELECT `id`,`mid_logo`,`goods_name`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_floor` = '是' AND `id` IN ('6','9') ORDER BY sort_num ASC LIMIT 8   [ RunTime:0.000684s ]
+SQL: SELECT * FROM `p_category`  [ RunTime:0.000305s ]
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+SQL: SELECT `id` FROM `p_goods` WHERE `cate_id` IN ('19')  [ RunTime:0.000244s ]
+SQL: SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('19')  [ RunTime:0.000135s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `p_goods_cate` WHERE `cate_id` IN ('19')' at line 1
+ [ SQL语句 ] : SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('19') 
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\GoodsModel.class.php 第 559 行.
+SQL: SELECT `id`,`mid_logo`,`goods_name`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_floor` = '是' AND `id` IN () ORDER BY sort_num ASC LIMIT 8   [ RunTime:0.000152s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY sort_num ASC LIMIT 8' at line 1
+ [ SQL语句 ] : SELECT `id`,`mid_logo`,`goods_name`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_floor` = '是' AND `id` IN () ORDER BY sort_num ASC LIMIT 8  
+SQL: SELECT * FROM `p_category`  [ RunTime:0.000287s ]
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+SQL: SELECT `id` FROM `p_goods` WHERE `cate_id` IN ('20')  [ RunTime:0.000256s ]
+SQL: SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('20')  [ RunTime:0.000124s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `p_goods_cate` WHERE `cate_id` IN ('20')' at line 1
+ [ SQL语句 ] : SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('20') 
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\GoodsModel.class.php 第 559 行.
+SQL: SELECT `id`,`mid_logo`,`goods_name`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_floor` = '是' AND `id` IN () ORDER BY sort_num ASC LIMIT 8   [ RunTime:0.000135s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY sort_num ASC LIMIT 8' at line 1
+ [ SQL语句 ] : SELECT `id`,`mid_logo`,`goods_name`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_floor` = '是' AND `id` IN () ORDER BY sort_num ASC LIMIT 8  
+SQL: SELECT * FROM `p_category`  [ RunTime:0.000312s ]
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+SQL: SELECT `id` FROM `p_goods` WHERE `cate_id` IN ('2')  [ RunTime:0.000212s ]
+SQL: SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('2')  [ RunTime:0.000087s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `p_goods_cate` WHERE `cate_id` IN ('2')' at line 1
+ [ SQL语句 ] : SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('2') 
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\GoodsModel.class.php 第 559 行.
+SQL: SELECT DISTINCT brand_id,b.brand_name,b.logo FROM p_goods a LEFT JOIN p_brand b ON a.brand_id= b.id  WHERE a.id IN () AND a.brand_id <> 0 LIMIT 9   [ RunTime:0.000109s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND a.brand_id <> 0 LIMIT 9' at line 1
+ [ SQL语句 ] : SELECT DISTINCT brand_id,b.brand_name,b.logo FROM p_goods a LEFT JOIN p_brand b ON a.brand_id= b.id  WHERE a.id IN () AND a.brand_id <> 0 LIMIT 9  
+SQL: SELECT * FROM `p_category` WHERE `parent_id` = '2' AND `is_floor` = '否'  [ RunTime:0.000220s ]
+SQL: SELECT * FROM `p_category` WHERE `parent_id` = '2' AND `is_floor` = '是'  [ RunTime:0.000258s ]
+SQL: SELECT * FROM `p_category`  [ RunTime:0.000324s ]
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\CategoryModel.class.php 第 29 行.
+SQL: SELECT `id` FROM `p_goods` WHERE `cate_id` IN ('21')  [ RunTime:0.000290s ]
+SQL: SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('21')  [ RunTime:0.000147s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `p_goods_cate` WHERE `cate_id` IN ('21')' at line 1
+ [ SQL语句 ] : SELECT DISTINCT goods_id is FROM `p_goods_cate` WHERE `cate_id` IN ('21') 
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Admin\Model\GoodsModel.class.php 第 559 行.
+SQL: SELECT `id`,`mid_logo`,`goods_name`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_floor` = '是' AND `id` IN () ORDER BY sort_num ASC LIMIT 8   [ RunTime:0.000147s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY sort_num ASC LIMIT 8' at line 1
+ [ SQL语句 ] : SELECT `id`,`mid_logo`,`goods_name`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_floor` = '是' AND `id` IN () ORDER BY sort_num ASC LIMIT 8  
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `promote_price` > 0 AND `promote_start_date` <= '2017-05-15 11:34' AND `promote_end_date` >= '2017-05-15 11:34' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.001578s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_new` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000686s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_hot` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000388s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_best` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000449s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 464 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000957s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001047s ]
+
+[ 2017-05-15T11:34:51+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001231s ]
+SQL: DESCRIBE p_category [ RunTime:0.000852s ]
+SQL: DESCRIBE p_goods [ RunTime:0.003975s ]
+SQL: SELECT * FROM `p_goods` WHERE `id` = 22 LIMIT 1   [ RunTime:0.000441s ]
+SQL: DESCRIBE p_goods_pic [ RunTime:0.003786s ]
+SQL: SELECT * FROM `p_goods_pic` WHERE `goods_id` = '22'  [ RunTime:0.000356s ]
+SQL: DESCRIBE p_goods_attr [ RunTime:0.000697s ]
+SQL: SELECT a.*,b.attr_name,b.attr_type FROM p_goods_attr a LEFT JOIN p_attribute b ON a.attr_id=b.id  WHERE a.goods_id = '22'  [ RunTime:0.000350s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Home\Controller\IndexController.class.php 第 59 行.
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `p_category` WHERE `id` = 16 LIMIT 1   [ RunTime:0.000265s ]
+SQL: SELECT `id`,`cat_name`,`parent_id` FROM `p_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000226s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 171 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\862a52d698112494831f0f0bc6d3727d.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.161272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.161331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001594s ]
+
+[ 2017-05-15T11:34:51+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001591s ]
+SQL: DESCRIBE p_category [ RunTime:0.000858s ]
+SQL: DESCRIBE p_goods [ RunTime:0.003281s ]
+SQL: SELECT `id`,`mid_logo`,`goods_name` FROM `p_goods` WHERE `id` IN ('22','15','6') AND `is_on_sale` = '是' ORDER BY FIELD(id,22,15,6)  [ RunTime:0.154616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001803s ]
+
+[ 2017-05-15T11:35:12+08:00 ] 127.0.0.1 /index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000260s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001427s ]
+SQL: DESCRIBE p_category [ RunTime:0.001937s ]
+SQL: DESCRIBE p_goods [ RunTime:0.003643s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `promote_price` > 0 AND `promote_start_date` <= '2017-05-15 11:35' AND `promote_end_date` >= '2017-05-15 11:35' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000461s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_new` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000347s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_hot` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000373s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_best` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000356s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 464 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001220s ]
+
+[ 2017-05-15T13:23:15+08:00 ] 127.0.0.1 /index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001357s ]
+SQL: DESCRIBE p_category [ RunTime:0.000918s ]
+SQL: DESCRIBE p_goods [ RunTime:0.004889s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `promote_price` > 0 AND `promote_start_date` <= '2017-05-15 13:23' AND `promote_end_date` >= '2017-05-15 13:23' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000885s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_new` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000428s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_hot` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000389s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `p_goods` WHERE `is_on_sale` = '是' AND `is_best` = '是' ORDER BY sort_num ASC LIMIT 5   [ RunTime:0.000377s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000482s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000644s ]
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined index: children D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 464 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 487 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\httpd\Apache24\htdocs\zjxm\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001375s ]
+

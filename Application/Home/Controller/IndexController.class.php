@@ -3,8 +3,8 @@ namespace Home\Controller;
 class IndexController extends NavController {
     public function index(){
         // 测试静态化结束时并发调用的代码
-        $file = uniqid();  //基于以微秒计的当前时间，生成一个唯一的 ID
-        file_put_contents('./piao/'.$file,'abc'); //  每次执行生成一个文件
+//        $file = uniqid();  //基于以微秒计的当前时间，生成一个唯一的 ID
+//        file_put_contents('./piao/'.$file,'abc'); //  每次执行生成一个文件
         // 获取首页楼层的数据
         $cateModel = D('Admin/Category');
         $floorData = $cateModel->floorData();
@@ -38,13 +38,45 @@ class IndexController extends NavController {
         //根据ID 取出商品的详情
         $gModel = D('Admin/Goods');
         $good_info = $gModel->find($id);
+        // 取出商品相册
+        $gpModel = D('goods_pic');
+        $gpData = $gpModel->where(array(
+            'goods_id' => array('eq',$id),
+        ))->select();
+
+        // 取出这个商品的所有属性
+        $gaModel = D('goods_attr');
+        $gaData = $gaModel->alias('a')
+            ->field('a.*,b.attr_name,b.attr_type')
+            ->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
+            ->where(array(
+                'a.goods_id'=>array('eq',$id),
+            ))->select();
+
+        // 整理所有的属性，把唯一和可选属性分开
+        $uniAtt= array();   //  存储唯一属性
+        $mulAtt= array();   //  存储可选属性
+        foreach ($gaData as $k => $v){
+            if ($v['attr_type']=='唯一')
+                $uniAtt[] = $v;
+            else{
+                // 把同一属性放在一起,二维转三维数组
+                $mulAtt[$v['attr_name']][] =$v;
+            }
+        }
+
         // 在根据主分类ID 找出这个分类所有上级分类制作导航（面包屑）
         $catModel = D('Admin/Category');
         $catPath = $catModel->parentPath($good_info['cate_id']);
         dump($catPath);
+        $viewPath = C('IMAGE_CONFIG');
         $this->assign(array(
+            'uniAtt'=>$uniAtt,
+            'mulAtt'=>$mulAtt,
+            'gpData'=>$gpData,
             'info'=>$good_info,
             'catPath'=>$catPath,
+            'viewPath'=>$viewPath['viewPath'],
         ));
         // 页面信息设置
         $this->assign(array(

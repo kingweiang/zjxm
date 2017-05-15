@@ -37,7 +37,7 @@
         </p>
     </div>
     <div id="tabbody-div">
-        <form enctype="multipart/form-data" action="/index.php/Admin/Goods/edit/id/11.html" method="post">
+        <form enctype="multipart/form-data" action="/index.php/Admin/Goods/edit/id/4/p/2.html" method="post">
             <input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
             <!-- 基本信息 -->
             <table width="90%" class="tab_table" align="center">
@@ -432,6 +432,38 @@
             }
         }
     }
+
+    // 添加一张
+    $("#btn_add_pic").click(function(){
+        var file = '<li><input type="file" name="pic[]" /></li>';
+        $("#ul_pic_list").append(file);
+    });
+    // 删除图片
+    $(".btn_del_pic").click(function(){
+        if(confirm('确定要删除吗？'))
+        {
+            // 先选中删除按钮所在的li标签
+            var li = $(this).parent();
+            // 从这个按钮上获取pic_id属性
+            var pid = $(this).attr("pic_id");
+            /**
+             php中的大U函数三个参数：
+             U('ajaxDelPic')                    ==>   /index.php/Admin/Goods/ajaxDelPic.html
+             U('ajaxDelPic?id=1')                  ==>   /index.php/Admin/Goods/ajaxDelPic/id/1.html
+             U('ajaxDelPic', array('id'=>1))      ==>   /index.php/Admin/Goods/ajaxDelPic/id/1.html
+             U('ajaxDelPic', array('id'=>1), FALSE)      ==>   /index.php/Admin/Goods/ajaxDelPic/id/1
+             **/
+            $.ajax({
+                type : "GET",
+                url : "<?php echo U('ajaxDelPic', '', FALSE); ?>/picid/"+pid,
+                success : function($data)
+                {
+                    // 把图片从页面中删除掉
+                    li.remove();
+                }
+            });
+        }
+    });
 </script>
 
 

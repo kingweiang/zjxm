@@ -222,7 +222,7 @@ $("#tabbar-div p span").click(function () {
 
 })
 
-
+// 选择类型获取属性的AJAX
 $("select[name=type_id]").change(function () {
     // 获取当前选中的类型ID
     var typeId=$(this).val();
@@ -302,6 +302,14 @@ $("select[name=type_id]").change(function () {
         }else
             li.remove();
     }
+
+// 添加一张
+$("#btn_add_pic").click(function(){
+    var file = '<li><input type="file" name="pic[]" /></li>';
+    $("#ul_pic_list").append(file);
+});
+
+
 </script>
 
 

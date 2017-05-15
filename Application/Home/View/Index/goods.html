@@ -150,12 +150,12 @@
 		<div class="goods_content fl mt10 ml10">
 			<!-- 商品概要信息 start -->
 			<div class="summary">
-				<h3><strong>ThinkPad X230(23063T4）12.5英寸笔记本（i5-3230M 8GB 500G HD4000 指纹蓝牙 WIN8PRC 一年质保）</strong></h3>
+				<h3><strong><?php echo $info['goods_name']; ?></strong></h3>
 				
 				<!-- 图片预览区域 start -->
 				<div class="preview fl">
 					<div class="midpic">
-						<a href="__PUBLIC__/Home/images/preview_l1.jpg" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+						<a href="<?php echo $viewPath.$info['mbig_logo']; ?>" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
 							<?php showImage($info['big_logo']); ?>               <!-- 第一幅图片的中图 -->
 						</a>
 					</div>
@@ -167,45 +167,46 @@
 						<a href="javascript:;" id="forward" class="on"></a>
 						<div class="smallpic_wrap">
 							<ul>
+								<!--第一个是商品logo-->
 								<li class="cur">
-									<a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m1.jpg',largeimage: '__PUBLIC__/Home/images/preview_l1.jpg'}"><img src="__PUBLIC__/Home/images/preview_s1.jpg"></a>
+									<a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '<?php echo $viewPath.$info['big_logo']; ?>',largeimage: '<?php echo $viewPath.$info['mbig_logo']; ?>'}"><?php showImage($info['sm_logo']);?></a>
 								</li>
 								<li>
 									<a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m2.jpg',largeimage: '__PUBLIC__/Home/images/preview_l2.jpg'}"><img src="__PUBLIC__/Home/images/preview_s2.jpg"></a>
 								</li>
 								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m3.jpg',largeimage: '__PUBLIC__/Home/images/preview_l3.jpg'}">  
+									<a href="javascript:void(0);"
+									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m3.jpg',largeimage: '__PUBLIC__/Home/images/preview_l3.jpg'}">
 	    							<img src="__PUBLIC__/Home/images/preview_s3.jpg"></a>
 								</li>
 								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m4.jpg',largeimage: '__PUBLIC__/Home/images/preview_l4.jpg'}">  
+									<a href="javascript:void(0);"
+									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m4.jpg',largeimage: '__PUBLIC__/Home/images/preview_l4.jpg'}">
 	    							<img src="__PUBLIC__/Home/images/preview_s4.jpg"></a>
 								</li>
 								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m5.jpg',largeimage: '__PUBLIC__/Home/images/preview_l5.jpg'}">  
+									<a href="javascript:void(0);"
+									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m5.jpg',largeimage: '__PUBLIC__/Home/images/preview_l5.jpg'}">
 	    							<img src="__PUBLIC__/Home/images/preview_s5.jpg"></a>
 								</li>
 								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m6.jpg',largeimage: '__PUBLIC__/Home/images/preview_l6.jpg'}">  
+									<a href="javascript:void(0);"
+									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m6.jpg',largeimage: '__PUBLIC__/Home/images/preview_l6.jpg'}">
 	    							<img src="__PUBLIC__/Home/images/preview_s6.jpg"></a>
 								</li>
 								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m7.jpg',largeimage: '__PUBLIC__/Home/images/preview_l7.jpg'}">  
+									<a href="javascript:void(0);"
+									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m7.jpg',largeimage: '__PUBLIC__/Home/images/preview_l7.jpg'}">
 	    							<img src="__PUBLIC__/Home/images/preview_s7.jpg"></a>
 								</li>
 								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m8.jpg',largeimage: '__PUBLIC__/Home/images/preview_l8.jpg'}">  
+									<a href="javascript:void(0);"
+									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m8.jpg',largeimage: '__PUBLIC__/Home/images/preview_l8.jpg'}">
 	    							<img src="__PUBLIC__/Home/images/preview_s8.jpg"></a>
 								</li>
 								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m9.jpg',largeimage: '__PUBLIC__/Home/images/preview_l9.jpg'}">  
+									<a href="javascript:void(0);"
+									rel="{gallery: 'gal1', smallimage: '__PUBLIC__/Home/images/preview_m9.jpg',largeimage: '__PUBLIC__/Home/images/preview_l9.jpg'}">
 	    							<img src="__PUBLIC__/Home/images/preview_s9.jpg"></a>
 								</li>
 							</ul>
@@ -559,8 +560,7 @@
 <include file="Common/help" />
 
 <script>
-<?php $config = C('IMAGE_CONFIG'); ?>
-var viewPath = '<?php echo $config['viewPath']; ?>';
+var viewPath = '<?php echo $viewPath; ?>';
 // 记录浏览历史
 $.ajax({
 	type : "GET",

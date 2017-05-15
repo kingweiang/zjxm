@@ -10,15 +10,18 @@ class GoodsController extends BaseController
 
 	    // 判断是否使用post方法提交了表单
 	    if(IS_POST){
+//	        dump($_POST);die;
 	        $model = D('goods');
             /**Create():1 接受数据并保持到模型中 2根据模型定义的规则定义表单
              *
              */
 	        if($model->create(I('post.'),1)){
+                dump($model->create(I('post.'),1));
 	            if($model->add()){ // 在这之前调用了_before_insert方法
                     $this->success('添加成功',U('lst'));
                     exit;
                 }
+//                dump($model->add());die;
             }
             $error=$model->getError();
 	        $this->error($error);
@@ -55,11 +58,14 @@ class GoodsController extends BaseController
         if(IS_POST){
 //                    dump($_POST);die;
              if($model->create(I('post.'),2)){  // 2 表示修改
+
                 if(FALSE !== $model->save()){
                     // save()的返回值是，如果失败返回false，如果成功返回受影响的条数。如果修改前和修改后一样就返回0.所以需要设置false不为真
+
                     $this->success('修改成功',U('lst'));
                     exit;
                 }
+
             }
             $error=$model->getError();
             $this->error($error);
@@ -70,7 +76,7 @@ class GoodsController extends BaseController
         $data = $model->find($id);
         $this->assign('data',$data);
 
-        //        分类下拉框
+        //        取出所有分类做下拉框
         $cateModel = D('category');
         $cateData = $cateModel->getTree();
 
@@ -82,7 +88,8 @@ class GoodsController extends BaseController
         $gcData = $gcModel->field('cate_id')->where(array(
             'goods_id'=>array('eq',$id)
         ))->select();
-        // 取出会员信息
+
+        // 取出会员级别信息
         $memberModel=D('member_level');
         $memberData = $memberModel->select();
 
@@ -99,6 +106,13 @@ class GoodsController extends BaseController
             $_mpData[$v['level_id']] = $v['price'];
         }
 //        var_dump($_mpData);
+
+        // 取出相册中现有的图片
+        $gpModel = D('goods_pic');
+        $gpData = $gpModel->field('id,mid_pic')->where(array(
+            'goods_id' => array('eq', $id),
+        ))->select();
+
         // 取出当前类型下所有的属性
         $attrModel = D('Attribute');
         $attrData = $attrModel->alias('a')
@@ -122,11 +136,12 @@ class GoodsController extends BaseController
 //        var_dump($gaData);
         // 设置页面标题等信息
         $this->assign(array(
-            'gaData'=> $attrData,
-            'gcData'=>$gcData,
-            'cateData' => $cateData,
-            'mlData'=>$memberData,
-            'mpData'=>$_mpData,
+            'gpData'=>$gpData,        //  商品相册信息
+            'gaData'=> $attrData,     // 商品属性信息
+            'gcData'=>$gcData,        // 商品类别信息
+            'cateData' => $cateData,  // 所有分类数据
+            'mlData'=>$memberData,    // 会员级别数据
+            'mpData'=>$_mpData,        // 会员价信息
             '_page_title'=>'修改商品',
             '_page_btn_name'=>'商品列表',
             '_page_btn_link'=>U('lst'),
@@ -134,6 +149,20 @@ class GoodsController extends BaseController
         $this->display();
 
     }
+
+    // 处理AJAX删除图片的请求
+    public function ajaxDelPic()
+    {
+        $picId = I('get.picid');
+        // 根据ID从硬盘上数据删除中删除图片
+        $gpModel = D('goods_pic');
+        $pic = $gpModel->field('pic,sm_pic,mid_pic,big_pic')->find($picId);
+        // 从硬盘删除图片
+        deleteImage($pic);
+        // 从数据库中删除记录
+        $gpModel->delete($picId);
+    }
+
 	// 商品列表页
 	public function lst()
 	{

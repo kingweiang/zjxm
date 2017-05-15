@@ -8,9 +8,9 @@ use Think\Page;
 class GoodsModel extends Model 
 {
 	 // 添加时调用create方法允许接收的字段
-	protected $insertFields = 'goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,ext_cate_id,
-	type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num,is_floor';
-    // 修改时调用update方法允许接收的字段
+	protected $insertFields = 'goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,
+	ext_cate_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num,is_floor';
+	// 修改时调用update方法允许接收的字段
 	protected $updateFields = 'id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cate_id,
 	ext_cate_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_hot,is_best,sort_num,is_floor';
 	// 定义验证规则
@@ -74,7 +74,7 @@ class GoodsModel extends Model
 //		    	$data['sm_logo'] = $smlogo;
 //		    }
 //		}
-
+        /**************** 处理LOGO *******************/
 //        使用函数上传图片并生成缩略图
         $ret = uploadOne('logo', 'Goods', array(
             array(700, 700),
@@ -215,7 +215,45 @@ class GoodsModel extends Model
                 deleteImage($oldlogo);
             }
         }
-
+        /************ 处理相册图片 *****************/
+        if(isset($_FILES['pic']))
+        {
+            $pics = array();
+            foreach ($_FILES['pic']['name'] as $k => $v)
+            {
+                $pics[] = array(
+                    'name' => $v,
+                    'type' => $_FILES['pic']['type'][$k],
+                    'tmp_name' => $_FILES['pic']['tmp_name'][$k],
+                    'error' => $_FILES['pic']['error'][$k],
+                    'size' => $_FILES['pic']['size'][$k],
+                );
+            }
+            $_FILES = $pics;  // 把处理好的数组赋给$_FILES，因为uploadOne函数是到$_FILES中找图片
+            $gpModel = D('goods_pic');
+            // 循环每个上传
+            foreach ($pics as $k => $v)
+            {
+                if($v['error'] == 0)
+                {
+                    $ret = uploadOne($k, 'Goods', array(
+                        array(650, 650),
+                        array(350, 350),
+                        array(50, 50),
+                    ));
+                    if($ret['ok'] == 1)
+                    {
+                        $gpModel->add(array(
+                            'pic' => $ret['images'][0],
+                            'big_pic' => $ret['images'][1],
+                            'mid_pic' => $ret['images'][2],
+                            'sm_pic' => $ret['images'][3],
+                            'goods_id' => $id,
+                        ));
+                    }
+                }
+            }
+        }
         /************ 处理会员价格 ****************/
         $mp = I('post.member_price');
         $mpModel = D('member_price');
@@ -236,6 +274,7 @@ class GoodsModel extends Model
                 ));
             }
         }
+
         // 通过公共自定义方法过滤这个字段
         $data['goods_desc'] = removeXSS($_POST['goods_desc']);
     }
@@ -334,13 +373,18 @@ class GoodsModel extends Model
     {
         $id = $options['where']['id'];
         // 查询出原来的图片路径
-        $oldlogo=$this->field('logo,mbig_logo,big_logo,mid_logo,sm_logo')->find($id);
-        // 删除硬盘上的图片
-        unlink('./public/uploads/'.$oldlogo['logo']);
-        unlink('./public/uploads/'.$oldlogo['mbig_logo']);
-        unlink('./public/uploads/'.$oldlogo['big_logo']);
-        unlink('./public/uploads/'.$oldlogo['mid_logo']);
-        unlink('./public/uploads/'.$oldlogo['sm_logo']);
+//        $oldlogo=$this->field('logo,mbig_logo,big_logo,mid_logo,sm_logo')->find($id);
+//        // 删除硬盘上的图片
+//        unlink('./public/uploads/'.$oldlogo['logo']);
+//        unlink('./public/uploads/'.$oldlogo['mbig_logo']);
+//        unlink('./public/uploads/'.$oldlogo['big_logo']);
+//        unlink('./public/uploads/'.$oldlogo['mid_logo']);
+//        unlink('./public/uploads/'.$oldlogo['sm_logo']);
+        /*************** 删除原来的图片 *******************/
+         //先查询出原来图片的路径
+        $oldLogo = $this->field('logo,mbig_logo,big_logo,mid_logo,sm_logo')->find($id);
+        deleteImage($oldLogo);
+
         //  删除商品属性
         $gaModel = D('goods_attr');
         $gaModel->where(array(
@@ -363,6 +407,20 @@ class GoodsModel extends Model
         $mpModel = D('goods_cate');
         $mpModel->where(array(
             'goods_id'=>array('eq',$id),
+        ))->delete();
+
+        /************** 删除相册中的图片 ********************/
+        // 先从相册表中取出相册所在硬盘的路径
+        $gpModel = D('goods_pic');
+        $pics = $gpModel->field('pic,sm_pic,mid_pic,big_pic')->where(array(
+            'goods_id' => array('eq', $id),
+        ))->select();
+        // 循环每个图片从硬盘上删除图片
+        foreach ($pics as $k => $v)
+            deleteImage($v);  //删除pic,sm_pic,mid_pic,big_pic四张
+        // 从数据库中把记录删除
+        $gpModel->where(array(
+            'goods_id' => array('eq', $id),
         ))->delete();
     }
 
@@ -407,6 +465,63 @@ class GoodsModel extends Model
             if($_v > 0) {   // 当大于0 时，进行插入操作
                 $mpModel->add(array(
                     'price' => $v,
+                    'level_id' => $k,
+                    'goods_id' => $data['id'],
+                ));
+            }
+        }
+
+        /************ 处理相册图片 *****************/
+        if(isset($_FILES['pic']))
+        {
+            $pics = array();
+            foreach ($_FILES['pic']['name'] as $k => $v)
+            {
+                $pics[] = array(
+                    'name' => $v,
+                    'type' => $_FILES['pic']['type'][$k],
+                    'tmp_name' => $_FILES['pic']['tmp_name'][$k],
+                    'error' => $_FILES['pic']['error'][$k],
+                    'size' => $_FILES['pic']['size'][$k],
+                );
+            }
+            $_FILES = $pics;  // 把处理好的数组赋给$_FILES，因为uploadOne函数是到$_FILES中找图片
+            $gpModel = D('goods_pic');
+            // 循环每个上传
+            foreach ($pics as $k => $v)
+            {
+                if($v['error'] == 0)
+                {
+                    $ret = uploadOne($k, 'Goods', array(
+                        array(650, 650),
+                        array(350, 350),
+                        array(50, 50),
+                    ));
+                    if($ret['ok'] == 1)
+                    {
+                        $gpModel->add(array(
+                            'pic' => $ret['images'][0],
+                            'big_pic' => $ret['images'][1],
+                            'mid_pic' => $ret['images'][2],
+                            'sm_pic' => $ret['images'][3],
+                            'goods_id' => $data['id'],
+                        ));
+                    }
+                }
+            }
+        }
+
+        /************ 处理会员价格 ****************/
+        $mp = I('post.member_price');
+        $mpModel = D('member_price');
+        foreach ($mp as $k => $v)
+        {
+            $_v = (float)$v;
+            // 如果设置了会员价格就插入到表中
+            if($_v > 0)
+            {
+                $mpModel->add(array(
+                    'price' => $_v,
                     'level_id' => $k,
                     'goods_id' => $data['id'],
                 ));

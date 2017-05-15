@@ -102,6 +102,7 @@ function showImage($url, $width = '', $height = '')
         $height = "height='$height'";
     echo "<img $width $height src='{$ic['viewPath']}$url' />";
 }
+
 // 有选择性的过滤XSS --》 说明：性能非常低-》尽量少用
 function removeXSS($data)
 {
