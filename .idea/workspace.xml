@@ -5,10 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/goods.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/goods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/608b0c961c661bd6d45820311b4b75a7.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/608b0c961c661bd6d45820311b4b75a7.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/83ef9968a31ad0939d8603a38f8428da.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/83ef9968a31ad0939d8603a38f8428da.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/862a52d698112494831f0f0bc6d3727d.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/862a52d698112494831f0f0bc6d3727d.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/17_05_15.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/17_05_15.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/17_05_23.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/17_05_23.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +34,7 @@
       <file leaf-file-name="GoodsModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/GoodsModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
+            <state relative-caret-position="19">
               <caret line="383" column="11" lean-forward="false" selection-start-line="383" selection-start-column="11" selection-end-line="383" selection-end-column="11" />
               <folding>
                 <element signature="e#657#872#0#PHP" expanded="false" />
@@ -57,8 +55,8 @@
       <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="71" column="68" lean-forward="false" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
+            <state relative-caret-position="665">
+              <caret line="79" column="47" lean-forward="true" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -67,8 +65,8 @@
       <file leaf-file-name="goods.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/goods.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="206" column="160" lean-forward="false" selection-start-line="206" selection-start-column="160" selection-end-line="206" selection-end-column="160" />
+            <state relative-caret-position="275">
+              <caret line="198" column="69" lean-forward="false" selection-start-line="198" selection-start-column="69" selection-end-line="198" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -228,8 +226,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-119" />
-    <option name="y" value="50" />
+    <option name="x" value="606" />
+    <option name="y" value="15" />
     <option name="width" value="1364" />
     <option name="height" value="725" />
   </component>
@@ -397,12 +395,12 @@
       <workItem from="1494599558925" duration="1950000" />
       <workItem from="1494814807751" duration="9542000" />
       <workItem from="1494895751535" duration="597000" />
-      <workItem from="1495488701271" duration="2634000" />
+      <workItem from="1495488701271" duration="3720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279750000" />
+    <option name="totallyTimeSpent" value="280836000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,7 +412,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-119" y="50" width="1364" height="725" extended-state="1" />
+    <frame x="606" y="15" width="1364" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29064417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -732,25 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/GoodsModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="383" column="11" lean-forward="false" selection-start-line="383" selection-start-column="11" selection-end-line="383" selection-end-column="11" />
-          <folding>
-            <element signature="e#657#872#0#PHP" expanded="false" />
-            <element signature="e#999#3969#0#PHP" expanded="false" />
-            <element signature="e#3975#10871#0#PHP" expanded="false" />
-            <element signature="e#10366#10426#1#PHP" expanded="false" />
-            <element signature="e#10447#10774#0#PHP" expanded="false" />
-            <element signature="e#10877#14304#0#PHP" expanded="false" />
-            <element signature="e#16206#19521#0#PHP" expanded="false" />
-            <element signature="e#19575#20594#0#PHP" expanded="false" />
-            <element signature="e#20631#21222#0#PHP" expanded="false" />
-            <element signature="e#21303#21684#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Goods/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5909">
@@ -809,18 +788,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/GoodsModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="383" column="11" lean-forward="false" selection-start-line="383" selection-start-column="11" selection-end-line="383" selection-end-column="11" />
+          <folding>
+            <element signature="e#657#872#0#PHP" expanded="false" />
+            <element signature="e#999#3969#0#PHP" expanded="false" />
+            <element signature="e#3975#10871#0#PHP" expanded="false" />
+            <element signature="e#10366#10426#1#PHP" expanded="false" />
+            <element signature="e#10447#10774#0#PHP" expanded="false" />
+            <element signature="e#10877#14304#0#PHP" expanded="false" />
+            <element signature="e#16206#19521#0#PHP" expanded="false" />
+            <element signature="e#19575#20594#0#PHP" expanded="false" />
+            <element signature="e#20631#21222#0#PHP" expanded="false" />
+            <element signature="e#21303#21684#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="71" column="68" lean-forward="false" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
+        <state relative-caret-position="665">
+          <caret line="79" column="47" lean-forward="true" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/goods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="206" column="160" lean-forward="false" selection-start-line="206" selection-start-column="160" selection-end-line="206" selection-end-column="160" />
+        <state relative-caret-position="275">
+          <caret line="198" column="69" lean-forward="false" selection-start-line="198" selection-start-column="69" selection-end-line="198" selection-end-column="69" />
           <folding />
         </state>
       </provider>

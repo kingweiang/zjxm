@@ -361,6 +361,18 @@
 						<li><span>商品编号： </span><?php echo $info['id']; ?></li>
 						<li class="market_price"><span>定价：</span><em>￥<?php echo $info['market_price']; ?>元</em></li>
 						<li class="shop_price"><span>本店价：</span> <strong>￥<?php echo $info['shop_price']; ?>元</strong> <a href="">(降价通知)</a></li>
+						<li class="shop_price"><span>会员价：</span>
+							<p>
+								<table cellpadding="5" cellspacing="5">
+								<?php foreach($mpData as $k => $v): ?>
+								 <tr>
+									 <td><?php echo $v['level_name']; ?>：</td>
+									 <td>￥<?php echo $v['price']; ?>元</td>
+								 </tr>
+								<?php endforeach; ?>
+							    </table>
+							</p>
+						</li>
 						<li><span>上架时间：</span><?php echo $info['addtime']; ?></li>
 						<li class="star star3"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
 					</ul>

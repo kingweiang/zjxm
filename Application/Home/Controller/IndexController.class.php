@@ -64,13 +64,22 @@ class IndexController extends NavController {
                 $mulAtt[$v['attr_name']][] =$v;
             }
         }
+//        取出这个商品的会员价格
+        $mpModel = D('member_price');
+        $mpData = $mpModel->alias('a')
+            ->field('a.price,b.level_name')
+            ->join('LEFT JOIN __MEMBER_LEVEL__ b ON a.level_id=b.id')
+            ->where(array(
+                'a.goods_id'=>array('eq',$id),
+            ))->select();
 
         // 在根据主分类ID 找出这个分类所有上级分类制作导航（面包屑）
         $catModel = D('Admin/Category');
         $catPath = $catModel->parentPath($good_info['cate_id']);
-        dump($catPath);
+
         $viewPath = C('IMAGE_CONFIG');  // 获取配置文件里面的IMAGE_CONFIG 配置项
         $this->assign(array(
+            'mpData'=>$mpData,
             'uniAtt'=>$uniAtt,
             'mulAtt'=>$mulAtt,
             'gpData'=>$gpData,
