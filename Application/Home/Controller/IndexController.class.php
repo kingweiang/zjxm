@@ -69,7 +69,7 @@ class IndexController extends NavController {
         $catModel = D('Admin/Category');
         $catPath = $catModel->parentPath($good_info['cate_id']);
         dump($catPath);
-        $viewPath = C('IMAGE_CONFIG');
+        $viewPath = C('IMAGE_CONFIG');  // 获取配置文件里面的IMAGE_CONFIG 配置项
         $this->assign(array(
             'uniAtt'=>$uniAtt,
             'mulAtt'=>$mulAtt,

@@ -38,7 +38,7 @@
             <tr>
                 <td class="label">属性可选值：</td>
                 <td>
-                    <textarea name="6" id="" cols="60" rows="10" name="attr_option_values"></textarea>
+                    <textarea id="" cols="60" rows="10" name="attr_option_values"></textarea>
                 </td>
             </tr>
             <tr>
