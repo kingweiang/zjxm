@@ -80,7 +80,7 @@ class AdminController extends BaseController
     		$this->success('删除成功！', U('lst', array('p' => I('get.p', 1))));
     		exit;
     	}
-    	else 
+    	else
     	{
     		$this->error($model->getError());
     	}
