@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50709
 File Encoding         : 65001
 
-Date: 2017-05-15 15:30:53
+Date: 2017-05-23 09:17:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -64,7 +64,7 @@ CREATE TABLE `p_attribute` (
   `type_id` mediumint(8) unsigned NOT NULL COMMENT '类型Id',
   PRIMARY KEY (`id`),
   KEY `type_id` (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='属性表';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='属性表';
 
 -- ----------------------------
 -- Records of p_attribute
@@ -72,6 +72,7 @@ CREATE TABLE `p_attribute` (
 INSERT INTO `p_attribute` VALUES ('1', '颜色', '可选', '白色,银色,黑色,玫瑰金', '1');
 INSERT INTO `p_attribute` VALUES ('2', '尺寸', '可选', '4.8寸,5寸,5.5寸,6寸', '1');
 INSERT INTO `p_attribute` VALUES ('5', '手机内存', '可选', '1GB,2GB,4GB', '1');
+INSERT INTO `p_attribute` VALUES ('6', '生产日期', '唯一', '', '1');
 
 -- ----------------------------
 -- Table structure for p_brand
@@ -201,7 +202,7 @@ CREATE TABLE `p_goods_attr` (
   PRIMARY KEY (`id`),
   KEY `attr_id` (`attr_id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='商品属性表';
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='商品属性表';
 
 -- ----------------------------
 -- Records of p_goods_attr
@@ -228,6 +229,7 @@ INSERT INTO `p_goods_attr` VALUES ('19', '5.5寸', '2', '24');
 INSERT INTO `p_goods_attr` VALUES ('20', '2GB', '5', '24');
 INSERT INTO `p_goods_attr` VALUES ('21', '1GB', '5', '24');
 INSERT INTO `p_goods_attr` VALUES ('22', '4GB', '5', '24');
+INSERT INTO `p_goods_attr` VALUES ('23', '发发的撒法萨芬', '6', '15');
 
 -- ----------------------------
 -- Table structure for p_goods_cate
@@ -300,7 +302,7 @@ CREATE TABLE `p_goods_pic` (
   `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
   PRIMARY KEY (`id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='商品相册';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='商品相册';
 
 -- ----------------------------
 -- Records of p_goods_pic
@@ -316,6 +318,23 @@ INSERT INTO `p_goods_pic` VALUES ('8', 'Goods/2017-05-15/59195822641f6.jpg', 'Go
 INSERT INTO `p_goods_pic` VALUES ('9', 'Goods/2017-05-15/59195822978e7.jpg', 'Goods/2017-05-15/thumb_2_59195822978e7.jpg', 'Goods/2017-05-15/thumb_1_59195822978e7.jpg', 'Goods/2017-05-15/thumb_0_59195822978e7.jpg', '15');
 INSERT INTO `p_goods_pic` VALUES ('10', 'Goods/2017-05-15/59195822c1c39.jpg', 'Goods/2017-05-15/thumb_2_59195822c1c39.jpg', 'Goods/2017-05-15/thumb_1_59195822c1c39.jpg', 'Goods/2017-05-15/thumb_0_59195822c1c39.jpg', '15');
 INSERT INTO `p_goods_pic` VALUES ('11', 'Goods/2017-05-15/59195822f30ea.jpg', 'Goods/2017-05-15/thumb_2_59195822f30ea.jpg', 'Goods/2017-05-15/thumb_1_59195822f30ea.jpg', 'Goods/2017-05-15/thumb_0_59195822f30ea.jpg', '15');
+
+-- ----------------------------
+-- Table structure for p_member
+-- ----------------------------
+DROP TABLE IF EXISTS `p_member`;
+CREATE TABLE `p_member` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `username` varchar(30) NOT NULL COMMENT '用户名',
+  `password` char(32) NOT NULL COMMENT '密码',
+  `face` varchar(150) NOT NULL DEFAULT '' COMMENT '用户头像',
+  `jifen` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '会员积分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员用户表';
+
+-- ----------------------------
+-- Records of p_member
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for p_member_level

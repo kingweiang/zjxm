@@ -189,3 +189,15 @@ create table p_admin
 
 # SELECT md5('admin');   查询admin的密码
 insert into p_admin(id,username,password) values(1,'admin','21232f297a57a5a743894a0e4a801fc3');
+
+/****************** 前端使用表 **************************/
+drop table if exists p_member;
+create table p_member
+(
+  id mediumint unsigned not null auto_increment comment 'Id',
+  username VARCHAR(30) not null comment '用户名',
+  password CHAR(32) not null comment '密码',
+  face VARCHAR(150) NOT NULL DEFAULT ''COMMENT '用户头像',
+  jifen MEDIUMINT UNSIGNED NOT NULL DEFAULT '0' COMMENT '会员积分',
+  primary key (id)
+)engine=InnoDB default charset=utf8 comment '会员用户表';
