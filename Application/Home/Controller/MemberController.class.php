@@ -62,4 +62,20 @@ class MemberController extends Controller {
         $model->logout();
         redirect('/');
     }
+    // ajax获取登录状态方法
+
+    public function ajaxChkLogin()
+    {
+        sleep(3);
+        if(session('m_id'))
+            echo json_encode(array(
+                'login' => 1,
+                'username' => session('m_username'),
+            ));
+        else
+            echo json_encode(array(
+                'login' => 0,
+            ));
+    }
+
 }
