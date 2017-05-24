@@ -24,7 +24,9 @@
         </div>
         <div class="topnav_right fr">
             <ul>
-                <li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+                <li id="logInfo">
+
+                </li>
                 <li class="line">|</li>
                 <li>我的订单</li>
                 <li class="line">|</li>
@@ -373,6 +375,7 @@
 							    </table>
 							</p>
 						</li>
+						<li class="shop_price"><span>购买价：</span> <strong style="font-size: 25px;" id="member_price"></strong> <a href="">(降价通知)</a></li>
 						<li><span>上架时间：</span><?php echo $info['addtime']; ?></li>
 						<li class="star star3"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
 					</ul>
@@ -759,6 +762,15 @@ $.ajax({
 		$("#display_history").html(html);
 	}
 });
+//  ajax计算会员价格
+$.ajax({
+    type : "GET",
+    url : "<?php echo U('ajaxGetMemberPrice?goods_id='.$info['id']); ?>",
+    success : function(data)
+    {
+		$("#member_price").html("￥"+data+"元");
+    }
+});
 </script>
 
 
@@ -811,3 +823,20 @@ $.ajax({
 
 </body>
 </html>
+
+<script>
+    // 判断登录状态
+    $.ajax({
+        type : "GET",
+        url : "<?php echo U('Member/ajaxChkLogin'); ?>",
+        dataType : "json",
+        success : function(data)
+        {
+            if(data.login == 1)
+                var li = '您好，'+data.username+' [<a href="<?php echo U('Member/logout'); ?>">退出</a>]';
+            else
+            var li = '您好，欢迎来到京西！[<a href="<?php echo U('Member/login'); ?>">登录</a>] [<a href="<?php echo U('Member/regist'); ?>">免费注册</a>]'
+            $("#logInfo").html(li);
+        }
+    });
+</script>

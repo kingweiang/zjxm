@@ -1,6 +1,13 @@
 <?php
 namespace Home\Controller;
 class IndexController extends NavController {
+    public function ajaxGetMemberPrice()
+    {
+        $goodsId = I('get.goods_id');
+        $gModel = D('Admin/Goods');
+        // 单个字符串或单个数字时，不需要返回json
+        echo  $gModel->getMemberPrice($goodsId);
+    }
     public function index(){
         // 测试静态化结束时并发调用的代码
 //        $file = uniqid();  //基于以微秒计的当前时间，生成一个唯一的 ID
